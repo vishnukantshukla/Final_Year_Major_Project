@@ -26,7 +26,7 @@ const MongoDBStore = require('express-mongodb-session')(session);
 
 const dburl=process.env.dbURL||'mongodb://127.0.0.1:27017/health-care';
 const dburl2='mongodb://127.0.0.1:27017/health-care';
-const url="https://anikateagrawal.github.io/health_check/";
+const url="https://vishnukantshukla.github.io/Health_Check_System/";
 const url2="http://localhost:3000/health_check";
  
 passport.use(new LocalStrategy(User.authenticate()));  
@@ -105,3 +105,4 @@ app.engine('ejs',engine);
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
+ 
