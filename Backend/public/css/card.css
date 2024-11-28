@@ -1,0 +1,30 @@
+.font{
+    color: #17594A;
+    font-weight: bold;
+}
+.ad{
+    background-color: #17594A;
+    color: white;
+    position: relative;
+    right: -1300px;
+    top: -40px;
+}
+.imgd{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid white;
+    box-shadow: 0.5px 0.5px 1px white;
+}
+.car{
+    background-color: #17594aa0;
+    color: white;
+}
+.car .btn{
+    background-color: white;
+    color: #17594A;
+    font-weight: bolder;
+    border: 2px solid #17594A;
+    box-shadow: 1px 1px 2px #17594A;
+}

@@ -1,0 +1,47 @@
+<%- layout('./layout/boilerplate') %>
+
+<div class="f1">
+<form action="/products/<%=products.id%>?_method=patch" method="post" class="row f2">
+  <h1>Update here</h1>
+
+  <div class="col-lg-6">
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="<%=products.name%>">
+    </div>
+    <div class="mb-3">
+      <label for="img" class="form-label">Image Url</label>
+      <input type="text" class="form-control" id="img" name="img" value="<%=products.img%>">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Specialization</label>
+      <select id="" class="form-control" name="price">
+        <option value="Dermatologists">Dermatologists</option>
+        <option value="Allergist">Allergist</option>
+        <option value="Gastroenterologists">Gastroenterologists</option>
+        <option value="Infectious disease doctors">Infectious disease doctors</option>
+        <option value="Ophthalmologists">Ophthalmologists</option>
+        <option value="Cardiologists">Cardiologists</option>
+        <option value="Endocrinologists">Endocrinologists</option>
+        <option value="Gastroenterologists">Gastroenterologists</option>
+        <option value="Nephrologists">Nephrologists</option>
+        <option value="Urologists">Urologists</option>
+        <option value="Pulmonologists">Pulmonologists</option>
+        <option value="Otolaryngologists">Otolaryngologists</option>
+        <option value="Neurologists">Neurologists</option>
+        <option value="Psychiatrists">Psychiatrists</option>
+        <option value="Oncologists">Oncologists</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="mb-3">
+      <label for="desc" class="form-label">Experience</label>
+      
+      <textarea name="desc" id="desc" class="form-control" rows="8"><%=products.desc%></textarea>
+    </div>
+  </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>

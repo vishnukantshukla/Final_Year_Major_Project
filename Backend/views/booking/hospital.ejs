@@ -1,0 +1,35 @@
+<% layout('./layout/boilerplate')%>
+<h1>Bookings</h1>
+<% for(let booking of bookings){const doctor=booking.doctor;const patient=booking.patient; %>
+    <div class="card p-5 m-5">
+    <div class="row">
+
+        <div class="col-lg-3">
+            <img src="<%=doctor.img%>" class="card-img-top" alt="..." width="150px" height="250px"/>
+            <div class="card-body">
+              <h5 class="card-title">Dr. <%=doctor.name%></h5>
+              <h3 class="card-text"><%=doctor.price%></h3>
+              <p class="card-text">Experience: <%=doctor.desc%></p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <img src="<%=patient.image%>" class="card-img-top" alt="..." width="150px" height="250px"/>
+            <div class="card-body">
+              <h5 class="card-title">Username: <%=patient.username%></h5>
+              <h3 class="card-text">Name: <%=patient.Name%></h3>
+              <p class="card-text">Email : <%=patient.email%></p>
+              <p class="card-text">Address: <%=patient.Address%></p>
+              <p class="card-text">Contact: <%=patient.contact%></p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <h6>Booking date: <%=booking.date%></h6>
+            <h6>Booking time slot: <%=booking.time_slot%></h6>
+            <form action="/booking/<%=booking.id%>?_method=delete" method="post">
+                <button class="btn btn-danger">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%}%>

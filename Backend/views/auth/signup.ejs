@@ -1,0 +1,39 @@
+<%- layout('./layout/boilerplate') %>
+<div class="col-lg-6 mx-auto">
+  <div class="container signup p-3">
+    <div>
+<form action="/signup" method="post">
+    <h1 style="text-align: center;">Signup</h1>
+    <div class="mb-3">
+      <!-- <label for="username" class="form-label">Username</label> -->
+      <input type="text"onfocus="this.value=''" value="Username" class="form-control b c1" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+        <!-- <label for="password" class="form-label">Password</label> -->
+        <input type="password" onfocus="this.value=''" value="Password" class="form-control b c1" id="password" name="password" required>
+    </div>
+    <div class="mb-3">
+        <!-- <label for="email" class="form-label">Email</label> -->
+        <input type="email" onfocus="this.value=''" value="Email" class="form-control b c1" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <!-- <label for="contact" class="form-label">Contact</label> -->
+      <input type="text" onfocus="this.value=''" value="Contact" class="form-control b c1" id="contact" name="contact" required>
+  </div>
+  <div class="mb-3 c1">
+    <label class="form-label" for="profile">Register as:</label>
+    <input type="radio" name="profile" id="retailer" value="retailer"  required>
+    <label for="profile" class="form-label" >
+       Hospital</label>
+    <input type="radio" name="profile" value="consumer" id="retailer" required>
+    <label for="profile" class="form-label">
+        Patient</label>
+</div>
+    <button type="submit" class="btn btn-secondary b1">Sign Up</button>
+  </form>
+<p>Already a Member? <a class="active a1" href="/login">Log In</a></p>
+</div>
+  
+</div>
+
+</div>

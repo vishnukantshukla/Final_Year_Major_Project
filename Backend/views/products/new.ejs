@@ -1,0 +1,43 @@
+<%- layout('./layout/boilerplate') %>
+<div class="f1">
+<form action="/doctors/new" method="post" class="row f2">
+    <h1 class="pb-3">Add A Doctor</h1>
+    <div class="col-lg-6">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="img" class="form-label">Image Url</label>
+      <input type="text" class="form-control" id="img" name="img" required>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Specialization</label>
+      <select id="" class="form-control" name="price">
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Allergist">Allergist</option>
+        <option value="Gastroenterologist">Gastroenterologist</option>
+        <option value="Infectious disease Specialist">Infectious disease Specialist</option>
+        <option value="Ophthalmologist">Ophthalmologist</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Endocrinologist">Endocrinologist</option>
+        <option value="Gastroenterologist">Gastroenterologist</option>
+        <option value="Nephrologist">Nephrologist</option>
+        <option value="Urologist">Urologist</option>
+        <option value="Pulmonologist">Pulmonologist</option>
+        <option value="Otolaryngologist">Otolaryngologist</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Psychiatrist">Psychiatrist</option>
+        <option value="Oncologist">Oncologist</option>
+      </select>
+    </div>
+  </div>
+    <div class="col-lg-6">
+    <div class="mb-3">
+      <label for="desc" class="form-label">Experience</label><br>
+      <textarea name="desc" id="desc" class="form-control" rows="8"></textarea>
+    </div>
+  </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>

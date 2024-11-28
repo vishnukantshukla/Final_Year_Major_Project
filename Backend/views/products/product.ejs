@@ -1,0 +1,10 @@
+<% layout('./layout/boilerplate') %>
+<h2 class="font">All Doctors</h2>
+
+<div>
+    <% if(user && user.profile=="retailer"){%>
+    <a href="/doctors/new" class="btn ad">Add New Doctor</a>
+    <% }%>
+</div>
+
+<%- include("../partials/card")%>

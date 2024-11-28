@@ -1,0 +1,18 @@
+<%- layout('./layout/boilerplate') %>
+<div class="col-lg-6 mx-auto signup">
+<form action="/login" method="post">
+    <h1 style="text-align: center;">Login</h1>
+    <p>New to this site? <a class="a1" href="/signup"><u>Sign up</u></a></p>
+    <div class="mb-3">
+      <label for="username" class="form-label c1">Username*</label>
+      <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label c1">Password*</label>
+        <input type="password"  class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary b1">Log In</button>
+    <a href="/signup" ></a>
+  </form>
+
+</div>

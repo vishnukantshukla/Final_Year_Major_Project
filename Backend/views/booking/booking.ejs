@@ -1,0 +1,21 @@
+<% layout('./layout/boilerplate')%>
+<div class="row"style="padding:50px 0px">
+    <% for (let booking of bookings ){ const product=booking.doctor %>
+      <div class="col-lg-3 mb-3 ">
+       <div class="card shadow-lg mx-auto" style="width: 18rem;">
+          <img src="<%=product.img%>" class="card-img-top " style="height:200px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dr. <%=product.name%></h5>
+            <h6 class="card-text"><%=product.price%></h6>
+            <p class="card-text">Experience: <%=product.desc%></p>
+            <a href="/doctors/<%=product.id%>" class="btn btn-primary my-2">Doctor's details</a>
+            <h6>Booking date: <%=booking.date%></h6>
+            <h6>Time slot: <%=booking.time_slot%></h6>
+            <form action="/booking/<%=booking.id%>?_method=delete" method="post">
+                <button class="btn btn-danger">Cancel</button>
+            </form>
+          </div>
+        </div> 
+      </div>
+    <%}%>
+  </div>

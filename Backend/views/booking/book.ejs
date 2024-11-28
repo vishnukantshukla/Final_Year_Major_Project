@@ -1,0 +1,49 @@
+<% layout('./layout/boilerplate') %>
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="card" style="width: 18rem">
+      <img src="<%=products.img%>" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Dr. <%=products.name%></h5>
+        <h3 class="card-text"><%=products.price%></h3>
+        <p class="card-text">Experience: <%=products.desc%></p>
+      </div>
+    </div>
+  </div>
+  <% if( products.creator) {%>
+  <div class="col-lg-4">
+    <h2>Hospital Details</h2>
+    <div class="card" style="width: 18rem">
+      <img src="<%=products.creator.img%>" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%=products.creator.username%></h5>
+        <p class="card-text">Email: <%=products.creator.email%></p>
+        <p class="card-text">Contact No: <%=products.creator.contact%></p>
+      </div>
+    </div>
+  </div>
+  <%}%>
+  <div class="card col-lg-4">
+    <div class="card-body">
+    <form action="/book/<%=products.id%>" method="post">
+        <h1>Book Now</h1>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="mb-3">
+            <label for="time_slot" class="form-label">Time Slot</label>
+            <select class="form-control" id="time_slot" name="time_slot" required>
+                <option value="10am-11am">10am-11am</option>
+                <option value="11am-12pm">11am-12pm</option>
+                <option value="12pm-1pm">12pm-1pm</option>
+                <option value="3pm-4pm">3pm-4pm</option>
+                <option value="4pm-5pm">4pm-5pm</option>
+            </select>
+        </div>
+        <button class="btn btn-primary">Confirm Booking</button>
+    </form>
+    </div>
+  </div>
+</div>

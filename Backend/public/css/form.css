@@ -1,0 +1,36 @@
+.f1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczU1LWV5ZS0wMDA4LmpwZw.jpg");
+    padding: 50px 50px 130px;
+    color: #17594A;
+    text-align: center;
+}
+.f2{
+    font-weight: bolder;
+}
+.f2 button{
+    background-color: #17594A;
+    color: white;
+    font-weight: bold;
+}
+.f2 input,select,textarea{
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px gray;
+}
+.f2 textarea{
+    border:  1px solid gray;
+}
+
+.f2 select{
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px gray;
+}
+.f2 button:hover{
+    background-color: #17594A;
+    color: white;
+    font-weight: bold;
+}

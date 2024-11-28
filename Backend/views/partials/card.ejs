@@ -1,0 +1,28 @@
+<div class="row" >
+  <% for (let product of products){ %>
+    <div class="col-lg-3 mb-3">
+     <div class="card shadow-lg mx-auto car" style="width: 18rem;">
+      <div>
+        <img src="<%=product.img%>" class="card-img-top imgd" alt="...">
+        
+          <h5 class="card-title mt-3 ml-5">Dr. <%=product.name%></h5>
+          <h6 class="card-text"><%=product.price%></h6>
+        </div>
+          <div class="card-body">
+          <p class="card-text">Experience: <%=product.desc%></p>
+          <a href="/doctors/<%=product.id%>" class="btn my-1 mx-1">Doctor's details</a>
+          <a href="/book/<%=product.id%>" class="btn my-1 mx-1">Book Now</a>
+          <% if(user && user.profile!='retailer'){%>
+        <form action="/doctors/saved/<%=product.id%>/add" method="post" class="d-inline"><button class="btn my-1 mx-1">Save for Later</button></form>
+<%}%>
+          <% if(user && (product.creator == user.id||user.isAdmin)) { %>
+            <a href="/doctors/<%=product.id%>/edit" class="btn my-1 mx-1">Update</a>
+          <form action="/doctors/<%=product.id%>?_method=delete" method="post" class="d-inline">
+            <button class="btn my-1 mx-1">Delete</button>
+          </form>
+            <%}%>
+        </div>
+      </div> 
+    </div>
+      <%}%>
+</div>
