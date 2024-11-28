@@ -1,10 +1,10 @@
 {
-  "name": "e-commerce",
+  "name": "Health_Care_System",
   "version": "1.0.0",
-  "description": "e commerce site",
+  "description": "GLA_HEALTH_CARE_WEBSITE",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -76,7 +76,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.listen(port,()=>{
     console.log("server running at port "+port);
-});
+}); 
 
 app.get('/',(req,res)=>{
     res.render('./partials/main');
